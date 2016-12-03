@@ -1,0 +1,9 @@
+.header{
+    background-color: $Blue;
+    text-align: center;
+
+    &__title{
+        font-weight: 300;
+        font-size: 2rem;
+    }
+}

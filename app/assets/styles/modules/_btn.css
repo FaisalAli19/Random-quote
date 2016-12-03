@@ -1,0 +1,9 @@
+.btn{
+    background-color: $Blue;
+    color: $White;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 20px 0;
+}

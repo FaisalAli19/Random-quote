@@ -1,0 +1,83 @@
+.Quote{
+    text-align: center;
+
+
+    &__desc{
+        font-weight: 300;
+        font-size: 1.2rem;
+        margin: 50px 0;
+
+        @mixin atSmall{
+            font-size: 1.5rem;
+        }
+    }
+
+    &__container{
+        max-width: 350px;
+        height: auto;
+        margin: 20px auto;
+        background-color: $Blue;
+        border-radius: 8px;
+        overflow: hidden;
+
+        &--q-left{
+            font-size: 2.5rem;
+            padding: 15px 0;
+        }
+    }
+
+    &__quote{
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.65;
+        padding: 0 10px;
+    }
+
+    &__author{
+        background-color: $DarkBlue;
+        font-size: 1.5rem;
+        padding: 15px 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    &__social{
+
+        ul{
+            margin: 0;
+            padding: 10px 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        li{
+            background-color: $White;
+            padding: 10px 15px;
+        }
+
+        a{
+            color: $White;
+            font-size: 1.3rem;
+            text-decoration: none;
+        }
+    }
+
+    &__social--text{
+        padding: 10px 0 0 0;
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    &__social--facebook{
+        color: #3b5998;
+    }
+
+    &__social--twitter{
+        color: #00aced;
+    }
+
+    &__social--tumblr{
+        color: #32506d;
+    }
+}
