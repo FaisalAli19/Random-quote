@@ -16,9 +16,12 @@ class Quote {
         //Get the randome quote from quote json file
         $.ajax({
             type: "GET",
-            dataType: "jsonp",
-            url: "https://crossorigin.me/http://api.forismatic.com/api/1.0/?",
-            data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+            headers: {
+                "X-Mashape-Key": "OivH71yd3tmshl9YKzFH7BTzBVRQp1RaKLajsnafgL2aPsfP9V",
+                Accept: "application/json",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            url: "https://andruxnet-random-famous-quotes.p.mashape.com/cat=famous",
             //If ajax was able to get the data then this function will run
             success: this.addQuote.bind(this)
         });
@@ -28,8 +31,9 @@ class Quote {
     }
 
     addQuote(data){
-        var quote = data.quoteText,
-        author = data.quoteAuthor;
+        var response = JSON.parse(data),
+        quote = response.quote,
+        author = response.author;
 
         //Empty the existing code
         this.newQuote.empty();
