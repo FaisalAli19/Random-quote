@@ -16,7 +16,7 @@ class Quote {
         //Get the randome quote from quote json file
         $.ajax({
             type: "GET",
-            dataType: "json",
+            dataType: "jsonp",
             url: "http://api.forismatic.com/api/1.0/?",
             data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
             //If ajax was able to get the data then this function will run
