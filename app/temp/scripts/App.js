@@ -101,7 +101,7 @@
 	            _jquery2.default.ajax({
 	                type: "GET",
 	                dataType: "jsonp",
-	                url: "http://api.forismatic.com/api/1.0/?",
+	                url: "https://crossorigin.me/http://api.forismatic.com/api/1.0/?",
 	                data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
 	                //If ajax was able to get the data then this function will run
 	                success: this.addQuote.bind(this)
